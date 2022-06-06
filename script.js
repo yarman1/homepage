@@ -21,3 +21,6 @@ const resize = () => {
 
   data.positions = new Array(Math.ceil(data.width / 10)).fill(0);
 };
+
+window.addEventListener("resize", resize);
+resize();
