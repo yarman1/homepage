@@ -177,7 +177,7 @@ body {
 /* Experience and additonal info styles */
 
 .experiences {
-  flex: 1 1 60%;
+  flex: 1 1 33%;
   margin-right: 50px;
 }
 
@@ -226,7 +226,7 @@ body {
 }
 
 .additional-info {
-  flex: 1 1 40%;
+  flex: 1 1 33%;
 }
 
 .additional-info__education {
@@ -268,4 +268,20 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+.additional-info__list-header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.additional-info__list-item , .experience__item{
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.additional-info__list-item::before, .experience__item::before{
+  content: "\2022  ";
+  color: var(--text-decoration-color);
 }
