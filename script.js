@@ -41,3 +41,5 @@ const draw = () => {
       line >= 10000 * Math.random() ? 0 : line + 10;
   }
 };
+
+const interval = setInterval(draw, 1000 / state.fps);
