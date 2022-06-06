@@ -6,16 +6,28 @@
   box-sizing: border-box;
 }
 
+#canvas {
+  position: absolute;
+  width: 100%;
+  height: 1000px;
+  left: 0;
+  top: 0;
+}
+
+main {
+  position: relative;
+}
+
 body {
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.5;
 
-  --primary-text-color: #181820;
-  --secondary-text-color: #5c5c62;
-  --durability-text-color: #6a737d9c;
-  --icon-color: #6a737d;
-  --border-color: #ff9a0045;
-  --text-decoration-color: #ff9a00;
+  --primary-text-color: #817f7f;
+  --secondary-text-color: #c4c4c4;
+  --durability-text-color: #fbfcfd9c;
+  --icon-color: #0dc434e0;  
+  --border-color: #32f15245;
+  --text-decoration-color: #45F332;
 }
 
 .container {
@@ -37,9 +49,11 @@ body {
 }
 
 .resume {
+  position: relative;
   margin: 50px auto;
-  border: 1px solid #f5f5f5;
-  box-shadow: 1px 1px 7px 7px #f5f5f5;
+  border: 1px solid #45F332;
+  box-shadow: 1px 1px 7px 7px #45F332;
+  background-color: #181820;
   padding: 30px 0;
   max-width: 900px;
 }
@@ -177,7 +191,7 @@ body {
 /* Experience and additonal info styles */
 
 .experiences {
-  flex: 1 1 60%;
+  flex: 1 1 33%;
   margin-right: 50px;
 }
 
@@ -226,7 +240,7 @@ body {
 }
 
 .additional-info {
-  flex: 1 1 40%;
+  flex: 1 1 33%;
 }
 
 .additional-info__education {
@@ -268,4 +282,21 @@ body {
 
 .additional-info__languages-item {
   color: var(--secondary-text-color);
+}
+
+.additional-info__list-header {
+  color: var(--secondary-text-color);
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.additional-info__list-item , .experience__item{
+  list-style-type: none;
+  color: var(--secondary-text-color);
+  margin-bottom: 20px;
+}
+
+.additional-info__list-item::before, .experience__item::before{
+  content: "\2022  ";
+  color: var(--text-decoration-color);
 }
