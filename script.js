@@ -26,3 +26,18 @@ window.addEventListener("resize", resize);
 resize();
 
 const randomPos = (items) => items[Math.floor(Math.random() * items.length)];
+
+const draw = () => {
+  const {width, height, positions} = data;
+  const {color, charset} = state;
+  ctx.fillStyle = "rgba(0,0,0,.05)";
+  ctx.fillRect(0, 0, width, height);
+  ctx.fillStyle = color;
+
+  for (let i = 0; i < positions.length; i++) {
+    const line = positions[i];
+    ctx.fillText(randomPos(charset), i * 10, positions);
+    positions[i] = line >= height || 
+      line >= 10000 * Math.random() ? 0 : line + 10;
+  }
+};
