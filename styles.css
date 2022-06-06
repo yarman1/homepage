@@ -272,7 +272,7 @@ body {
 
 .additional-info__list-header {
   color: var(--secondary-text-color);
-  text-align: center;
+  text-align: left;
   margin-bottom: 15px;
 }
 
