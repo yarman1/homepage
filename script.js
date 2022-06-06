@@ -36,7 +36,7 @@ const draw = () => {
 
   for (let i = 0; i < positions.length; i++) {
     const line = positions[i];
-    ctx.fillText(randomPos(charset), i * 10, positions);
+    ctx.fillText(randomPos(charset), i * 10, line);
     positions[i] = line >= height || 
       line >= 10000 * Math.random() ? 0 : line + 10;
   }
