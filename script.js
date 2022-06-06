@@ -15,3 +15,9 @@ const data = {
   positions: [], 
 };
 
+const resize = () => {
+  data.width = canvas.width = innerWidth;
+  data.height = canvas.height = innerHeight;
+
+  data.positions = new Array(Math.ceil(data.width / 10)).fill(0);
+};
