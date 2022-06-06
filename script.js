@@ -24,3 +24,5 @@ const resize = () => {
 
 window.addEventListener("resize", resize);
 resize();
+
+const randomPos = (items) => items[Math.floor(Math.random() * items.length)];
