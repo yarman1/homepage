@@ -5,3 +5,6 @@ const state = {
   color: "#0f0",
   charset: "BINARYSTUDIO2022",
 };
+
+const canvas = document.getElementById("canvas");
+const ctx = canvas.getContext("2d");
